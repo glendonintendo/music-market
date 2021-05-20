@@ -32,25 +32,25 @@ const tagData = [
         tag_name: 'percussion'
     },
     {
-        tag_name: 'guitar'
+        tag_name: 'jazz'
     },
     {
-        tag_name: 'guitar'
+        tag_name: 'r & b'
     },
     {
-        tag_name: 'guitar'
+        tag_name: 'picks'
     },
     {
-        tag_name: 'guitar'
+        tag_name: 'bows'
     },
     {
-        tag_name: 'guitar'
+        tag_name: 'strings'
     },
     {
-        tag_name: 'guitar'
+        tag_name: 'cd'
     },
     {
-        tag_name: 'guitar'
+        tag_name: 'lp'
     }
 ];
 
