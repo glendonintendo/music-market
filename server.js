@@ -1,9 +1,9 @@
 const express = require('express');
 const routes = require('./controllers');
-const sequelize = require('./config/connections');
 const passport = require('passport');
 const flash = require('express-flash');
 const session = require('express-session');
+const sequelize = require('./config/connection');
 // import sequelize connection
 
 const app = express();
@@ -36,9 +36,7 @@ app.use(passport.session());
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
-sequelize.sync({force: false})
-.then(() => {
-  app.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}!`);
-  });
+sequelize.sync({ force: false })
+  .then(() => {
+    app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
 });
