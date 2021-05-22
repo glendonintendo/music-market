@@ -55,7 +55,7 @@ router.get('/:id', (req, res) => {
 
 
 router.post('/', (req, res) => {
-    /*  req.body should be in format:
+    /*  req.body should be in format (product_name, description, price, and stock required):
         {
             product_name: "Les Paul",
             description: "a really cool guitar"
@@ -66,7 +66,7 @@ router.post('/', (req, res) => {
     */
     Product.create(req.body)
         .then((product) => {
-            if (req.body.tagIds.length) {
+            if (req.body.tagIds && req.body.tagIds.length) {
                 const productTagIdArr = req.body.tagIds.map(tag_id => {
                     return {
                         product_id: product.id,
@@ -86,6 +86,15 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
+    /*  req.body should be in format (at least one key required):
+        {
+            product_name: "Les Paul",
+            description: "a really cool guitar"
+            price: 7000,
+            stock: 1,
+            tagIds: [1, 2, 3, 4]
+        }
+    */
     Product.update(req.body, {
         where : {
             id: req.params.id
