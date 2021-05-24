@@ -14,6 +14,7 @@ Cart.init(
         },
         user_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
                 model: 'user',
                 key: 'id'
@@ -21,11 +22,16 @@ Cart.init(
         },
         product_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
                 model: 'product',
                 key: 'id'
             }
-        }
+        },
+        // quantity: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false
+        // }
     },
     {
         sequelize,
