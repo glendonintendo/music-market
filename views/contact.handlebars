@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/contactStyles.css">
+    <title>Contact Us</title>
+</head>
+<body class="grid-y">
+    {{> nav}}
+    <main class="banner">
+        <div class="contact-container">
+            <div class="banner-flavor-text">
+                <span>NO MATTER THE NEED, WE'RE HERE TO HELP</span>
+            </div>
+            <!-- modal triggers -->
+            <div class="banner-divider">
+                <div class="card">
+                    <div class="card-section">
+                        <h3>{{doggie}}</h3>
+                        <form action="submit" id="contact-form">
+                            <label for="name">Name: </label>
+                            <input type="text" name="name" id="contact-name" placeholder="Bob The Builder">
+                            <label for="email">Email: </label>
+                            <input type="email" name="email" id="contact-email" placeholder="Example@domain.com">
+                            <label for="message">Message: </label>
+                            <textarea name="message" id="contact-message" cols="25" rows="5" placeholder="e.g. I love this site..."></textarea>
+                            <button type="submit" class="orange-black-button-small">Submit</button>
+                        </form>
+                        <div class="faux-border">a</div>
+                        <p>Follow us on our social media!</p>
+                        <div class="social-media">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-instagram"></a>
+                            <a href="#" class="fa fa-pinterest"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    {{> footer-and-scripts}}
+</body>
+</html>
