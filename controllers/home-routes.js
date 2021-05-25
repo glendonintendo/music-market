@@ -12,10 +12,10 @@ router.get('/', (req, res) => {
         ]
     })
         .then(dbCategoryData => {
-            const categories = dbCategoryData.map(post => post.get({ plain: true }));
+            const categories = dbCategoryData.map(categories => categories.get({ plain: true }));
 
             res.render('homepage', {
-                posts,
+                categories,
                 loggedIn: req.session.loggedIn
             });
         })
