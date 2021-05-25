@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <title>Landing Page</title>
+</head>
+<body class="grid-y">
+    <nav id="nav-container grid-container">
+        <div class="grid-x">
+            <div class="cell large-10 medium-9 small-8">
+                <ul class="menu dropdown navbarLinks" data-dropdown-menu>
+                    <li class="menu-text">Music Market</li>
+                    <li>
+                        Browse
+                        <ul class="menu">
+                            <li>All Catagories</li>
+                            <!-- will need more categories -->
+                            <li>All Catagories</li>
+
+                            <li>All Catagories</li>
+                            <li>All Catagories</li>
+                            <li>All Catagories</li>
+                            <li>All Catagories</li>
+
+                        </ul>
+                    </li>
+                    <li>Deals</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="cell large-2 medium-3 small-4">
+                <ul class="menu profileLink">
+                    <li>Profile</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="banner">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell large-3 medium-4 small-6 banner-flavor-text">
+                    <span>WANT TO SUPPORT LOCAL MUSICIANS?</span>
+                    <button type="button" class="orange-black-button">START HERE</button>
+                </div>
+                <!-- modal triggers -->
+                <div class="cell large-3 medium-4 small-6 card banner-divider">
+                    <div class="card-divider">Welcome</div>
+                    <div class="card-section">
+                        <button type="button" data-open="modal-sign-in" class="orange-black-button-small">Log In!</button>
+                        <button type="button" data-open="modal-sign-up" class="orange-black-button-small">Sign Up!</button>
+                        <p>Need <a>help</a> with something?<br/><br/>Click the link above or visit our contact page!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- modal for sign in -->
+            <div class="reveal" id="modal-sign-in" data-reveal>
+                <h2>Login!</h2>
+                <form action="submit">
+                    <label for="loginEmail">Email: </label>
+                    <input type="text" name="loginEmail" id="loginEmail" placeholder="Example@domain.com">
+
+                    <label for="loginPass">Password</label>
+                    <input type="password" name="loginPass" id="loginPass" placeholder="Password123">
+
+                    <button type="submit" class="modal-submit-button">Log In</button>
+
+                    <button class="close-button" data-close type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </form>
+            </div>
+            <!-- modal for sign up -->
+            <div class="reveal" id="modal-sign-up" data-reveal>
+                <h2>Sign Up!</h2>
+                <form action="submit">
+                    <label for="signUpEmail">Email: </label>
+                    <input type="text" name="signUpEmail" id="signUpEmail" placeholder="Example@domain.com">
+
+                    <label for="signUpPass">Password: </label>
+                    <input type="password" name="signUpPass" id="signUpPass" placeholder="Password123">
+                    <!-- add another area for confirm password when MVP is met -->
+                    
+                    <button type="submit" class="modal-submit-button">Sign Up</button>
+
+                    <button class="close-button" data-close type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <section>
+        <div class="About">
+            <div>
+                <div class="left-about">
+                    <h3>A Little About Us</h3>
+                    <p>(Our life story)Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque sed omnis beatae at excepturi adipisci suscipit tempore magni totam animi quam repudiandae, consequatur obcaecati pariatur ut similique maxime veniam.</p>
+                </div>
+                <div class="left-about-img">
+                    <img src="./images/about-image1.jpg" alt="Jazzy man">
+                </div>
+            </div>
+            <div class="faux-border">a</div>
+            <div>
+                <div class="right-about-img">
+                    <img src="./images/about-image2.jpg" alt="Hands in shape of heart">
+                </div>
+                <div class="right-about">
+                    <h3>A Little About You</h3>
+                    <p>(List of how you can help support local musicians or how you can join the catalog)Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque sed omnis beatae at excepturi adipisci suscipit tempore magni totam animi quam repudiandae, consequatur obcaecati pariatur ut similique maxime veniam.</p>
+                </div>  
+            </div>  
+        </div>
+    </section>
+    <footer>
+        <p>Music Market Inc. &copy; 2021</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).foundation();
+    </script>
+</body>
+</html>
