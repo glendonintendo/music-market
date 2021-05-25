@@ -1,0 +1,84 @@
+main{
+    background-image: url("../images/contactImage.jpg");
+    background-size: 67.5%;
+    background-position-x: 0%;
+}
+
+.contact-container{
+    display: flex;
+}
+
+.banner-flavor-text{
+    padding: 11.5% 40% 0 10%;
+    font-size: 280%;
+    margin: 0;
+    width: 67.5%
+}
+
+.banner-divider{
+    margin: 0;
+    width: 32.5%;
+    padding: 2rem auto
+}
+
+.card{
+    height: 100%;
+}
+
+.card-section{
+    padding: 15% 8% 0 8%;
+}
+
+.card-section > h3{
+    color: var(--creme-color);
+    background-color: var(--red-color);
+    padding: .5rem;
+    text-align: center;
+}
+
+.card-section > p{
+    text-align: center;
+    margin-bottom: 2%;
+    margin-top: 0;
+}
+
+.orange-black-button-small{
+    margin: 4% 8%;
+}
+
+.faux-border{
+    margin-top: 5%;
+}
+
+.social-media{
+    margin: 0 auto;
+    display: flex;
+}
+
+.social-media > a{
+    margin-left: 10.5%;
+    font-size: 200%;
+    padding: 3% 4%;
+    width: 13%;
+    border-radius: 10%
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-pinterest {
+    background: #cb2027;
+    color: white;
+}
