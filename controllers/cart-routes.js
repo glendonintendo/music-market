@@ -43,6 +43,9 @@ router.get('/cart', withAuth, (req, res) => {
         });
 });
 
-
+router.get('/checkout', withAuth, (req, res) => {
+    console.log(req.session);
+    console.log('************************');
+});
 
 module.exports = router;
