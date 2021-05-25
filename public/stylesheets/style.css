@@ -96,9 +96,15 @@ main{
     height: 53.5rem;
 }
 
+.banner-container{
+    display: flex;
+    /*! flex-wrap: wrap; */
+}
+
 .banner-flavor-text{
-    margin: 14rem 0 0 5rem;
-    font-size: 3rem;
+    width: 20%;
+    margin: 12.5% 0 0 14%;
+    font-size: 230%;
     font-weight: bolder;
     font-style: italic;
     text-align: left;
@@ -106,8 +112,7 @@ main{
 }
 
 .banner-divider{
-    margin: 15rem 0 0 38rem !important;
-    
+    margin: 12.5% 0 0 32%;
 }
 
 .card{
@@ -118,8 +123,10 @@ main{
 }
 
 .card-divider, .reveal > h2{
+    padding: 1rem 6.5rem;
     background-color: var(--red-color);
     color: var(--creme-color);
+    /*! text-align: center; */
 }
 
 .card-section{
@@ -132,7 +139,7 @@ main{
 }
 
 .orange-black-button{
-    margin: 3rem 0 0 0;
+    margin: 10% 0 0 0;
     font-size: 1.75rem;
     font-weight: bolder;
     color: var(--off-black-color);

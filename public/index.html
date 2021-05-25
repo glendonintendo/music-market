@@ -40,14 +40,14 @@
         </div>
     </nav>
     <main class="banner">
-        <div class="grid-container">
-            <div class="grid-x grid-margin-x">
-                <div class="cell large-3 medium-4 small-6 banner-flavor-text">
-                    <span>WANT TO SUPPORT LOCAL MUSICIANS?</span>
-                    <button type="button" class="orange-black-button">START HERE</button>
-                </div>
-                <!-- modal triggers -->
-                <div class="cell large-3 medium-4 small-6 card banner-divider">
+        <div class="banner-container">
+            <div class="banner-flavor-text">
+                <span>WANT TO SUPPORT LOCAL MUSICIANS?</span>
+                <button type="button" class="orange-black-button">START HERE</button>
+            </div>
+            <!-- modal triggers -->
+            <div class="banner-divider">
+                <div class="card">
                     <div class="card-divider">Welcome</div>
                     <div class="card-section">
                         <button type="button" data-open="modal-sign-in" class="orange-black-button-small">Log In!</button>
@@ -56,42 +56,42 @@
                     </div>
                 </div>
             </div>
-            <!-- modal for sign in -->
-            <div class="reveal" id="modal-sign-in" data-reveal>
-                <h2>Login!</h2>
-                <form action="submit">
-                    <label for="loginEmail">Email: </label>
-                    <input type="text" name="loginEmail" id="loginEmail" placeholder="Example@domain.com">
+        </div>
+        <!-- modal for sign in -->
+        <div class="reveal" id="modal-sign-in" data-reveal>
+            <h2>Login!</h2>
+            <form action="submit">
+                <label for="loginEmail">Email: </label>
+                <input type="text" name="loginEmail" id="loginEmail" placeholder="Example@domain.com">
 
-                    <label for="loginPass">Password</label>
-                    <input type="password" name="loginPass" id="loginPass" placeholder="Password123">
+                <label for="loginPass">Password</label>
+                <input type="password" name="loginPass" id="loginPass" placeholder="Password123">
 
-                    <button type="submit" class="modal-submit-button">Log In</button>
+                <button type="submit" class="modal-submit-button">Log In</button>
 
-                    <button class="close-button" data-close type="button">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <button class="close-button" data-close type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
 
-                </form>
-            </div>
-            <!-- modal for sign up -->
-            <div class="reveal" id="modal-sign-up" data-reveal>
-                <h2>Sign Up!</h2>
-                <form action="submit">
-                    <label for="signUpEmail">Email: </label>
-                    <input type="text" name="signUpEmail" id="signUpEmail" placeholder="Example@domain.com">
+            </form>
+        </div>
+        <!-- modal for sign up -->
+        <div class="reveal" id="modal-sign-up" data-reveal>
+            <h2>Sign Up!</h2>
+            <form action="submit">
+                <label for="signUpEmail">Email: </label>
+                <input type="text" name="signUpEmail" id="signUpEmail" placeholder="Example@domain.com">
 
-                    <label for="signUpPass">Password: </label>
-                    <input type="password" name="signUpPass" id="signUpPass" placeholder="Password123">
-                    <!-- add another area for confirm password when MVP is met -->
-                    
-                    <button type="submit" class="modal-submit-button">Sign Up</button>
+                <label for="signUpPass">Password: </label>
+                <input type="password" name="signUpPass" id="signUpPass" placeholder="Password123">
+                <!-- add another area for confirm password when MVP is met -->
+                
+                <button type="submit" class="modal-submit-button">Sign Up</button>
 
-                    <button class="close-button" data-close type="button">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </form>
-            </div>
+                <button class="close-button" data-close type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </form>
         </div>
     </main>
     <section>
