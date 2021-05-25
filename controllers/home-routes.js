@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const sequelize = require('../config/connections');
+const sequelize = require('../config/connection');
 const { Category } = require('../models');
 
 //get all categories 
 router.get('/', (req, res) => {
-    console.log('=================');
+    console.log('*************************');
     Category.findAll({
         attributes: [
             'id',
@@ -12,10 +12,10 @@ router.get('/', (req, res) => {
         ]
     })
         .then(dbCategoryData => {
-            const categories = dbCategoryData.map(post => post.get({ plain: true }));
+            const categories = dbCategoryData.map(categories => categories.get({ plain: true }));
 
             res.render('homepage', {
-                posts,
+                categories,
                 loggedIn: req.session.loggedIn
             });
         })
