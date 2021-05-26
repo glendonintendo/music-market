@@ -15,6 +15,7 @@ router.get('/', (req, res) => {
             const categories = dbCategoryData.map(categories => categories.get({ plain: true }));
 
             res.render('homepage', {
+                layout: false,
                 categories,
                 loggedIn: req.session.loggedIn
             });
@@ -45,6 +46,7 @@ router.get('categories/:id', (req, res) => {
             const categories = dbCategoryData.get({ plain: true });
 
             res.render('browse', {
+                layout: false,
                 categories,
                 loggedIn: req.session.loggedIn
             });
@@ -57,11 +59,31 @@ router.get('/login', (req, res) => {
         res.redirect('/');
         return;
     }
-    res.render('login');
+    res.render('login', { layout: false });
 });
 
+router.get('/contact', (req, res) => {
+    console.log('*************************');
+    Category.findAll({
+        attributes: [
+            'id',
+            'category_name'
+        ]
+    })
+        .then(dbCategoryData => {
+            const categories = dbCategoryData.map(categories => categories.get({ plain: true }));
 
-
+            res.render('contact', {
+                layout: false,
+                categories,
+                loggedIn: req.session.loggedIn
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+})
 
 module.exports = router;
 

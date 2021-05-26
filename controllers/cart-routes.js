@@ -33,6 +33,7 @@ router.get('/cart', withAuth, (req, res) => {
             const cart = dbCartData.map(cart => cart.get({ plain: true }));
 
             res.render('cart', {
+                layout: false,
                 cart,
                 loggedIn: req.session.loggedIn
             });
