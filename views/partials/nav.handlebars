@@ -2,19 +2,13 @@
     <div class="grid-x">
         <div class="cell large-10 medium-9 small-8">
             <ul class="menu dropdown navbarLinks" data-dropdown-menu>
-                <li class="menu-text">Music Market</li>
+                <a href="/"><li class="menu-text">Music Market</li></a>
                 <li>
                     Browse
                     <ul class="menu">
-                        <li>All Catagories</li>
-                        <!-- will need more categories -->
-                        <li>All Catagories</li>
-
-                        <li>All Catagories</li>
-                        <li>All Catagories</li>
-                        <li>All Catagories</li>
-                        <li>All Catagories</li>
-
+                        {{#each categories as |category|}}
+                        <li>{{category.category_name}}</li>
+                        {{/each}}
                     </ul>
                 </li>
                 <li>Deals</li>
