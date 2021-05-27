@@ -5,7 +5,6 @@ class Product extends Model {}
 
 Product.init(
     {
-        // defining columns
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -26,6 +25,10 @@ Product.init(
             validate: {
                 isDecimal: true
             }
+        },
+        image_path: {
+            type: DataTypes.STRING,
+            allowNull: false
         },
         stock: {
             type: DataTypes.INTEGER,
