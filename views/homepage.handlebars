@@ -21,8 +21,13 @@
                 <div class="card">
                     <div class="card-divider">Welcome</div>
                     <div class="card-section">
+                        {{#if loggedIn}}
+                        <button type="button" class="orange-black-button-small" id="logout">Logout</button>
+                        <script src="./javascript/logout.js"></script>
+                        {{else}}
                         <button type="button" data-open="modal-sign-in" class="orange-black-button-small">Log In!</button>
                         <button type="button" data-open="modal-sign-up" class="orange-black-button-small">Sign Up!</button>
+                        {{/if}}
                         <p>Need <a href="/contact">help</a> with something?<br/><br/>Click the link above or visit our contact page!</p>
                     </div>
                 </div>
