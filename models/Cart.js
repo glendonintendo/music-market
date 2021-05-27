@@ -5,7 +5,6 @@ class Cart extends Model {}
 
 Cart.init(
     {
-        //defining columns
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -28,10 +27,10 @@ Cart.init(
                 key: 'id'
             }
         },
-        // quantity: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false
-        // }
+        quantity: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        }
     },
     {
         sequelize,

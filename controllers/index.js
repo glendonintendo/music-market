@@ -5,7 +5,7 @@ const homeRoutes = require('./home-routes');
 const cartRoutes = require('./cart-routes');
 
 router.use('/api', apiRoutes);
-router.use('/dashboard', cartRoutes);
+router.use('/cart', cartRoutes);
 router.use('/', homeRoutes);
 
 router.use((req, res) => {

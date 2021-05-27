@@ -7,7 +7,7 @@
                     Browse
                     <ul class="menu">
                         {{#each categories as |category|}}
-                        <li>{{category.category_name}}</li>
+                        <a href="/browse/{{category.id}}"><li>{{category.category_name}}</li></a>
                         {{/each}}
                     </ul>
                 </li>
@@ -17,6 +17,25 @@
         </div>
         <div class="cell large-2 medium-3 small-4">
             <ul class="menu profileLink">
+                <li>
+                    <button type="button" class="button" data-toggle="offCanvasRight1">View Cart</button>
+                    <div class="off-canvas position-right" id="offCanvasRight1" data-off-canvas>
+                        <div class="off-canvas-content" data-off-canvas-content>
+                            <h2>Cart</h2>
+                            <p>Your Items: </p>
+                            <div>
+                                <div>
+                                    <div class="cartProductQuantity">x2</div>
+                                    <div class="cartProductName">item1</div>
+                                    <div class="removeItem">&times;</div>
+                                </div>
+                            </div>
+                            <input type="checkbox" name="terms" id="terms">
+                            <label for="terms">Terms & Conditions</label>
+                            <div class="paypalContainerSect"></div>
+                        </div>
+                    </div>
+                </li>
                 <li>Profile</li>
             </ul>
         </div>

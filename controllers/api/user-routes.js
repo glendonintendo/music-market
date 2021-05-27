@@ -35,21 +35,20 @@ router.get('/:id', (req, res) => {
     })
 })
 
+// sign up
 router.post('/', (req, res) => {
+    console.log(req.body);
     User.create({
-        username: req.body.username,
         email: req.body.email,
         password: req.body.password
     })
         .then(dbUserData => {
-            // req.session.save(() => {
-            //     req.session.user_id = dbUserData.id;
-            //     req.session.username = dbUserData.username;
-            //     req.session.loggedIn = true;
+            req.session.save(() => {
+                req.session.user_id = dbUserData.id;
+                req.session.loggedIn = true;
 
-            //     res.json(dbUserData);
-            // });
-            res.json(dbUserData);
+                res.json(dbUserData);
+            });
         })
         .catch(err => {
             console.log(err);
@@ -75,13 +74,12 @@ router.post('/login', (req, res) => {
             return;
         }
 
-        // req.session.save(() => {
-        //     req.session.user_id = dbUserData.id;
-        //     req.session.username = dbUserData.username;
-        //     req.session.loggedIn = true;
+        req.session.save(() => {
+            req.session.user_id = dbUserData.id;
+            req.session.loggedIn = true;
 
-        //     res.json({ user: dbUserData, message: 'You are now logged in!' });
-        // });
+            res.json({ user: dbUserData, message: 'You are now logged in!' });
+        });
     });
 });
 

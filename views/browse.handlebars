@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/shoppingStyles.css">
+    <title>Shopping Page</title>
+</head>
+<body class="grid-y">
+    {{> nav}}
+    <main class="shopping-container">
+        <section class="filter grid-y grid-margin-y">
+            <h2>Filters: </h2>
+            <div class="faux-border">a</div>
+            <div class="grid-y filter-subcontainer">
+                {{#each tags as |tag|}}
+                <div class="filter-container">
+                    <input type="checkbox" name={{tag_name}}>
+                    <label for={{tag_name}}>{{tag_name}}</label>
+                </div>
+                {{/each}}             
+            </div>
+            <div class="faux-border">a</div>
+            <button type="submit" class="orange-black-button-small">Search</button>
+        </section>
+        <section class="shopping">
+            <h2>Results: </h2>
+            <div class="faux-border2">a</div>
+            <div class="product-container">
+                {{#each products as |product|}}
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-divider">{{product.product_name}}</div>
+                        <div class="card-section">
+                            <div class="img-height-container">
+                                <img src={{product.image_path}} alt="this ain't working">
+                            </div>
+                            <p>{{product.description}}</p>
+                            <p>Price: {{product.price}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </section>
+    </main>
+    {{> footer-and-scripts}}
+</body>
+</html>
