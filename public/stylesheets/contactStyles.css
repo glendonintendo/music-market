@@ -1,3 +1,7 @@
+/* ======================================================= */
+/*                          main                           */
+/* ======================================================= */
+
 main{
     background-image: url("../images/contactImage.jpg");
     background-size: 67.5%;
@@ -22,7 +26,8 @@ main{
 }
 
 .card{
-    height: 100%;
+    height: 110.2%;
+    box-shadow: inset 0 0px 16px 1px rgb(121, 121, 121);
 }
 
 .card-section{
@@ -81,4 +86,12 @@ main{
 .fa-pinterest {
     background: #cb2027;
     color: white;
+}
+
+/* ======================================================= */
+/*                     Footer Section                      */
+/* ======================================================= */
+
+footer{
+    box-shadow: none;
 }

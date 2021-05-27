@@ -1,0 +1,136 @@
+main{
+    background-image: none;
+    display: flex;
+    height: auto;
+}
+
+.filter{
+	flex: 1;
+  background-color: var(--orange-color);
+  width: 15%;
+	box-shadow: inset -20px 35px 20px -20px rgb(121, 121, 121);
+	height: auto;
+
+}
+
+.filter > h2{
+	margin-top: 30%;
+	margin-left: 15%;
+	font-size: 150%;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.filter-subcontainer{
+	padding-left: 25%;
+	height: auto;
+	margin-bottom: 10%;
+}
+
+.orange-black-button-small{
+	padding: 3%;
+	width: 60%;
+	margin: 2% auto;
+}
+
+.filter-container > label{
+	font-size: 100%
+}
+
+.filter-container > input {
+    appearance: none;
+    -webkit-appearance: none;
+	background-color: var(--off-black-color);
+	border: 1px solid #000;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 6%;
+	border-radius: 20%;
+	display: inline-block;
+	position: relative;
+	margin-top: 10%;
+	margin-bottom: -4%;
+}
+
+.filter-container > input:active, .filter-container > input:checked:active{
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+:is(.filter-container > input, .filter-container > input:checked):hover{
+    background-color: #6d898b;
+}
+
+.filter-container > input:checked{
+    background-color: var(--off-black-color);
+	border: 1px solid #000;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: var(--creme-color);
+}
+
+.filter-container > input:checked::after{
+    content: '\2714';
+	font-size: 90%;
+	position: absolute;
+	top: 18%;
+	left: 24%;
+	color: var(--creme-color);
+}
+
+.faux-border{
+	width: 70%;
+	color: var(--orange-color);
+	font-size: 40%;
+}
+
+.faux-border2{
+	border-top: 1px solid var(--off-black-color);
+	width: 95%;
+	color: var(--creme-color);
+	font-size: 40%;
+}
+
+.shopping{
+	flex: 4;
+  padding: 4%;
+	height: auto;
+}
+
+.shopping > h2{
+	margin-bottom: 1%
+}
+
+.product-container{
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	height: auto;
+}
+
+.card-container{
+	margin-right: 5%;
+	flex: 0 0 20%;
+	margin-bottom: 5%;
+}
+
+.card{
+    border-radius: 10%;
+    height: 100%;
+    border: 1px solid var(--red-color);
+}
+
+.card-divider{
+    padding: 2% 25%;
+}
+
+.card-section{
+	padding: 0;
+	border: 1px solid var(--red-color);
+}
+
+.card-section > p{
+	padding: 4%;
+}
+
+.img-height-container{
+	overflow: hidden;
+	height: 50%;
+}
