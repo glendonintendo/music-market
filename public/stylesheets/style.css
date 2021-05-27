@@ -205,6 +205,16 @@ body{
 	color: var(--creme-color);
 }
 
+.paypalContainerSect{
+    margin-top: 4%;
+    height: 15%;
+    width: 95%
+}
+
+.off-canvas-content > .paypalContainerSect > div{
+    border: none;
+}
+
 /* ======================================================= */
 /*                          main                           */
 /* ======================================================= */
