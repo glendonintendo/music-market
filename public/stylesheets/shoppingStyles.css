@@ -8,7 +8,7 @@ main{
 	flex: 1;
   background-color: var(--orange-color);
   width: 15%;
-	box-shadow: inset -20px 35px 20px -20px rgb(121, 121, 121);
+	box-shadow: inset -20px 35px 20px -20px rgba(10,10,10,.7);
 	height: auto;
 
 }
@@ -114,7 +114,14 @@ main{
 .card{
     border-radius: 10%;
     height: 100%;
-    border: 1px solid var(--red-color);
+    box-shadow: 0 0 10px 4px rgba(10,10,10,.7);
+    width: 100%;
+    transition: .5s;
+}
+
+.card:hover{
+    width: 105%;
+    height: 105%;
 }
 
 .card-divider{
@@ -123,7 +130,6 @@ main{
 
 .card-section{
 	padding: 0;
-	border: 1px solid var(--red-color);
 }
 
 .card-section > p{
@@ -133,4 +139,8 @@ main{
 .img-height-container{
 	overflow: hidden;
 	height: 50%;
+}
+
+.js-off-canvas-overlay.is-overlay-fixed{
+	background-color: #0000003b;
 }
