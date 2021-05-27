@@ -15,7 +15,7 @@ const productTagData = [
     },
     {
         product_id: 2,
-        tag_id: 12
+        tag_id: 10
     },
     {
         product_id: 3,
@@ -23,7 +23,7 @@ const productTagData = [
     },
     {
         product_id: 3,
-        tag_id: 13
+        tag_id: 11
     },
     {
         product_id: 4,
@@ -35,7 +35,7 @@ const productTagData = [
     },
     {
         product_id: 5,
-        tag_id: 17
+        tag_id: 15
     },
     {
         product_id: 6,
@@ -43,7 +43,7 @@ const productTagData = [
     },
     {
         product_id: 6,
-        tag_id: 16
+        tag_id: 14
     },
     {
         product_id: 7,
@@ -51,15 +51,15 @@ const productTagData = [
     },
     {
         product_id: 7,
-        tag_id: 14
-    },
-    {
-        product_id: 8,
-        tag_id: 11
-    },
-    {
-        product_id: 8,
         tag_id: 12
+    },
+    {
+        product_id: 8,
+        tag_id: 9
+    },
+    {
+        product_id: 8,
+        tag_id: 10
     }
 ];
 
