@@ -37,7 +37,6 @@ router.get('/:id', (req, res) => {
 
 // sign up
 router.post('/', (req, res) => {
-    console.log(req.body);
     User.create({
         email: req.body.email,
         password: req.body.password
@@ -81,7 +80,13 @@ router.post('/login', (req, res) => {
             res.json({ user: dbUserData, message: 'You are now logged in!' });
         });
     });
-});
+}
+// passport.authenticate('local', {
+//     successRedirect: '/',
+//     failureRedirect: '/',
+//     failureFlash: true
+// })
+);
 
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
