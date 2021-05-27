@@ -4,8 +4,6 @@ const { Cart, Category, Product, ProductTag, Tag, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
-    console.log(req.session);
-    console.log('**************************');
     Cart.findAll({
         where: {
             user_id: req.session.user_id,
