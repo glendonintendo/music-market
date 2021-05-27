@@ -26,12 +26,6 @@ const tagData = [
         tag_name: 'piano'
     },
     {
-        tag_name: 'snare drums'
-    },
-    {
-        tag_name: 'percussion'
-    },
-    {
         tag_name: 'jazz'
     },
     {
