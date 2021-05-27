@@ -3,7 +3,7 @@ const sequelize = require('../config/connection')
 const { Cart, Category, Product, ProductTag, Tag, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/cart', withAuth, (req, res) => {
+router.get('/', withAuth, (req, res) => {
     console.log(req.session);
     console.log('**************************');
     Cart.findAll({
