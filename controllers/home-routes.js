@@ -4,7 +4,6 @@ const { Category, Product, Tag, ProductTag } = require('../models');
 
 // homepage
 router.get('/', (req, res) => {
-    console.log('*************************');
     Category.findAll({
         attributes: [
             'id',
@@ -71,10 +70,6 @@ router.get('/browse/:id', (req, res) => {
             const products = data[1].map(products => products.get({ plain: true }));
             const tags = data[2].map(tags => tags.get({ plain: true }));
 
-            console.log(categories);
-            console.log(products);
-            console.log(tags);
-
             res.render('browse', {
                 layout: false,
                 categories,
@@ -87,7 +82,6 @@ router.get('/browse/:id', (req, res) => {
 
 // contact page
 router.get('/contact', (req, res) => {
-    console.log('*************************');
     Category.findAll({
         attributes: [
             'id',
