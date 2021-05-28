@@ -84,9 +84,9 @@ body{
     border: 0;
 }
 
-.navbarLinks > li > ul > li{
-    color: var(--off-black-color);
-    background-color: var(--orange-color);
+.navbarLinks > li > ul > a > li{
+    color: var(--creme-color);
+    background-color: var(--red-color);
     padding: 2%;
     transition: .3s
 }
