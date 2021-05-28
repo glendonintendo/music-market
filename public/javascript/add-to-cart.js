@@ -7,7 +7,6 @@ function addItemToCart(e){
     let cartProductName = document.createElement('div');
     let removeItem = document.createElement('div');
 
-    console.log(this);
     cartProductName.innerHTML = this.childNodes[1].childNodes[0].data;
     cartProductQuantity.innerHTML = /*document.querySelector('.card-section').innerHTML*/ 'x5';
     removeItem.innerHTML = '&times;';
