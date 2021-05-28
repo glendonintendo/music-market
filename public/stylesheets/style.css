@@ -299,7 +299,7 @@ main{
     transition: .3s
 }
 
-:is(.orange-black-button, .orange-black-button-small, .modal-submit-button, .navbarLinks > li > ul > li):hover{
+:is(.orange-black-button, .orange-black-button-small, .modal-submit-button, .navbarLinks > li > ul > a > li):hover{
     background-color: var(--yellow-color);
     color: var(--red-color);
 }

@@ -18,7 +18,7 @@ async function checkoutButtonHandler(event) {
     paypalContainerSectEl.className = 'paypalContainerSect';
     document.querySelector('.off-canvas-content').append(paypalContainerSectEl);
 
-
+    console.log(paypalCounter);
     if(!paypalCounter){
         paypalCounter++;
         paypal.Buttons({
@@ -59,5 +59,5 @@ function togglePaypal(){
     }
 }
 
-document.querySelector("#cart").addEventListener('change', checkoutButtonHandler);
+document.querySelector(".menu > li > button").addEventListener('click', checkoutButtonHandler);
 document.getElementById("terms").addEventListener("click", togglePaypal);
