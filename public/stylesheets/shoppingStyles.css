@@ -30,7 +30,9 @@ main{
 .orange-black-button-small{
 	padding: 3%;
 	width: 60%;
-	margin: 2% auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15%;
 }
 
 .filter-container > label{
@@ -86,6 +88,7 @@ main{
 	width: 95%;
 	color: var(--creme-color);
 	font-size: 40%;
+	margin-bottom: 2%;
 }
 
 .shopping{
@@ -115,13 +118,13 @@ main{
     border-radius: 10%;
     height: 100%;
     box-shadow: 0 0 10px 4px rgba(10,10,10,.7);
-    width: 100%;
+    width: 110%;
     transition: .5s;
 }
 
 .card:hover{
-    width: 105%;
-    height: 105%;
+    width: 113%;
+    height: 103%;
 }
 
 .card-divider{
@@ -138,7 +141,7 @@ main{
 
 .img-height-container{
 	overflow: hidden;
-	height: 50%;
+	height: 40%;
 }
 
 .js-off-canvas-overlay.is-overlay-fixed{
