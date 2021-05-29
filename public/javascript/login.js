@@ -5,22 +5,9 @@ async function loginFormHandler(event) {
     const password = document.querySelector('#loginPass').value.trim();
 
     if (email && password) {
-        const response = await fetch('/api/users/login', {
-            method: 'POST',
-            body: JSON.stringify({
-                email,
-                password
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-
-        if (response.ok) {
-            document.location.replace('/');
-        } else {
-            alert(response.statusText)
-        }
+        axios.post('/api/users/login', { email, password })
+            .then(() => document.location.replace('/'))
+            .catch(err => alert(err));
     }
 };
 
@@ -31,22 +18,9 @@ async function signupFormHandler(event) {
     const password = document.querySelector('#signUpPass').value.trim();
 
     if (email && password) {
-        const response = await fetch('/api/users', {
-            method: 'POST',
-            body: JSON.stringify({
-                email,
-                password
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-
-        if (response.ok) {
-            document.location.replace('/');
-        } else {
-            alert(response.statusText)
-        }
+        axios.post('/api/users', { email, password })
+            .then(() => document.location.replace('/'))
+            .catch(err => alert(err));
     }
 };
 

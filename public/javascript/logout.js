@@ -1,16 +1,7 @@
 async function logout() {
-    const response = await fetch('/api/users/logout', {
-        method: 'POST',
-        headers: {
-            'Content-type': 'application/json'
-        }
-    });
-
-    if (response.ok) {
-        document.location.replace('/');
-    } else {
-        alert(response.statusText);
-    }
-};
+    axios.post('/api/users/logout')
+        .then(() => document.location.replace('/'))
+        .catch(err => alert(err));
+}
 
 document.querySelector('#logout').addEventListener('click', logout);

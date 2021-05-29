@@ -26,5 +26,3 @@ function addItemToCart(e){
 document.querySelectorAll(".card").forEach(element => {
     element.addEventListener("click", addItemToCart); 
 });
-
-console.log('js is loaded');
