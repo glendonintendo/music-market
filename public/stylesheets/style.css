@@ -95,7 +95,7 @@ body{
     z-index: 9999;
     color: var(--red-color);
     background: var(--yellow-color);
-    box-shadow: 0 -1700px 0 1700px var(--yellow-color);
+    box-shadow: 0 -4100px 0 4100px var(--yellow-color);
 }
 
 .menu-text{
@@ -144,6 +144,9 @@ body{
 
 .cartProductQuantity{
     flex: 1;
+}
+
+.cartProductQuantity, .cartProductPrice{
     padding-top: 1%;
     font-size: 80%;
 }
@@ -152,6 +155,10 @@ body{
     flex: 8;
     padding-top: .5%;
     font-size: 90%;
+}
+
+.cartProductPrice{
+    flex: 2;
 }
 
 .removeItem{
@@ -176,7 +183,7 @@ body{
 	border-radius: 20%;
 	display: inline-block;
 	position: relative;
-	margin-top: 8%;
+	margin-top: 3%;
     margin-left: 6%;
 	margin-bottom: -2%;
 }
@@ -209,6 +216,13 @@ body{
     margin-top: 4%;
     height: 15%;
     width: 95%
+}
+
+.off-canvas-content > .total{
+    display: inline-block;
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 100%;
 }
 
 .off-canvas-content > .paypalContainerSect > div{
