@@ -78,8 +78,10 @@ function addItemToCart(e){
 })();
 
 
-document.querySelectorAll(".card-section > button").forEach(element => {
-    element.addEventListener("click", addItemToCart); 
+$(document).ready(function(){
+    document.querySelectorAll(".card-section > button").forEach(element => {
+        element.addEventListener("click", addItemToCart); 
+    });
 });
 
 
