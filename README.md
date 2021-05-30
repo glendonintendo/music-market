@@ -41,7 +41,7 @@ Our application is currently deployed using heroku and can be found [here](https
 A demo video of our deployed application can be found [here](https://www.youtube.com/watch?v=0_nQaP8IQkk).
 
 Although there have been minor changes, the diagrams below show our database structure and user map of our website.
-![database structure](assets/database-map.png)
+![database structure](assets/database-structure.png)
 ![user map](assets/state_diagram.png)
 
 ## Directions for Future Development
