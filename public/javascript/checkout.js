@@ -23,7 +23,6 @@ async function checkoutButtonHandler(event) {
     paypalContainerSectEl.className = 'paypalContainerSect';
     document.querySelector('.off-canvas-content').append(paypalContainerSectEl);
 
-    console.log(productNameStr);
     if(!paypalCounter && totalPrice){
         paypalCounter++;
         paypal.Buttons({
@@ -74,7 +73,5 @@ $(document).ready(function(){
     document.getElementById("terms").addEventListener("click", togglePaypal);
     document.querySelectorAll('.removeItem').forEach(item => {
         item.addEventListener('click', removeItemFromCart);
-    });
-    
-})
-
+    }); 
+});
