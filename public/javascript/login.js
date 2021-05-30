@@ -6,7 +6,7 @@ async function loginFormHandler(event) {
 
     if (email && password) {
         axios.post('/api/users/login', { email, password })
-            .then(() => document.location.replace('/'))
+            .then(() => document.location.replace('/browse'))
             .catch(err => alert(err));
     }
 };
@@ -19,7 +19,7 @@ async function signupFormHandler(event) {
 
     if (email && password) {
         axios.post('/api/users', { email, password })
-            .then(() => document.location.replace('/'))
+            .then(() => document.location.replace('/browse'))
             .catch(err => alert(err));
     }
 };
