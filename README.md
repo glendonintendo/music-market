@@ -1,73 +1,55 @@
 # Music Market <!-- omit in toc -->
 - [Description](#description)
-- [Technologies Used](#technologies-used)
-- [Testing, Installation, and Usage](#testing-installation-and-usage)
-- [Demo](#demo)
-- [Submission Requirements](#submission-requirements)
   - [User Story](#user-story)
-  - [Acceptance Criteria](#acceptance-criteria)
-  - [Grading Criteria](#grading-criteria)
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Dependencies](#dependencies)
+- [Demo](#demo)
+- [Directions for Future Development](#directions-for-future-development)
 ## Description
+The pandemic was, and still is, a huge hit for music and local business. This hasn’t stopped the musicians and music enthusiasts from finding ways to scratch that music itch, but it has limited their options for connecting with other local musicians and crafters of music products.
+
+Music Market is a digital marketplace that connects local vendors of artisanal music products to musicians and music enthusiasts. Vendors are able to sell their goods while still being COVID safe, while musicians will be able to get high-quality instruments at competitive prices. By being able to browse and filter to their liking, musicians will have no problem finding the supplies they need to hit the ground running as venues start to open back up. 
+
+### User Story
+```
+AS A music vendor 
+I WANT a website to sell my wares to local musicians and music enthusiasts 
+SO THAT I can reach a wider audience of patrons.
+```
 
 ## Technologies Used
+### Languages
+ - HTML/CSS
+ - JavaScript
 
-## Testing, Installation, and Usage
+### Dependencies
+ - **Axios** - front-end queries to make requests syntactically easier
+ - Bcrypt - hashing passwords for security
+ - Connect-session-sequelize - session management
+ - Dotenv - store environment variables
+ - Express - JavaScript server creation
+ - Express-handlebars - easy html templating
+ - Express-session - session management
+ - MySql2 - database connection management
+ - Nodemailer - server-side emailing
+ - Sequelize - orbject relation mapping
 
 ## Demo
+Our application is currently deployed using heroku and can be found [here](https://stark-citadel-98109.herokuapp.com/).
 
-## Submission Requirements
-### User Story
-AS A manager at an internet retail company
-I WANT a back end for my e-commerce website that uses the latest technologies
-SO THAT my company can compete with other e-commerce companies
-```
+A demo video of our deployed application can be found [here](https://www.youtube.com/watch?v=0_nQaP8IQkk).
 
-```
-### Acceptance Criteria
-GIVEN a functional Express.js API
-WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
-THEN I am able to connect to a database using Sequelize
-WHEN I enter schema and seed commands
-THEN a development database is created and is seeded with test data
-WHEN I enter the command to invoke the application
-THEN my server is started and the Sequelize models are synced to the MySQL database
-WHEN I open API GET routes in Insomnia Core for categories, products, or tags
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
-THEN I am able to successfully create, update, and delete data in my database
-```
+Although there have been minor changes, the diagrams below show our database structure and user map of our website.
+![database structure](assets/database-map.png)
+![user map](assets/state_diagram.png)
 
-```
-### Grading Criteria
-#### Technical Acceptance Criteria - 25% <!-- omit in toc -->
-- [ ] Uses Node and Express backend
-- [ ] Uses GET and POST routes for retrieving and adding new data (RESTful API)
-- [ ] Folder structure implements the MVC paradigm
-- [ ] Uses Handlebars.js as the templating engine
-- [ ] Uses MySQL database and Sequelize ORM
-- [ ] Uses .env node package to save API keys and other sensitive information
-- [ ] Includes user authentication with express-session and cookies
-- [ ] Uses at least one new library, package, or technology not covered in class
-#### Concept - 10% <!-- omit in toc -->
-- [ ] Unique and novel idea
-- [ ] Clearly and concisely artiulate project idea
-#### Deployment - 20% <!-- omit in toc -->
-- [ ] Deployed at live URL on Heroku and loads with no errors
-- [ ] GitHub URL submitted
-- [ ] Portfolio submitted at live URL with project featured
-#### Repository Quality - 10% <!-- omit in toc -->
-- [ ] Has a unique name
-- [ ] Follows best practices for file structure and naming conventions
-- [ ] Follows best practices for class/id naming conventions, indentation, quality comments, etc.
-- [ ] Contains multiple descriptive commit messages
-- [ ] Contains a quality README with description, screenshot, and link to deployed application
-#### Application Quality - 15% <!-- omit in toc -->
-- [ ] User experience is intuitive and easy to navigate
-- [ ] User interface style is clean and polished
-- [ ] Is reponsive
-#### Presentation - 10% <!-- omit in toc -->
-- [ ] Uses Powerpoint or similar presentation software
-- [ ] Each group member speaks during presentation
-- [ ] Follow Project Presentation Template
-#### Collaboration - 10% <!-- omit in toc -->
-- [ ] No major disparities in the number of GitHub contributions between group members
+## Directions for Future Development
+- complete cart and transaction functionality
+- complete browsing items by tags
+- complete contact form functionality to send email to admin and confirmation email to user
+- add email functionality to user when they complete a purchase
+- add a content management system for vendors to see their products
+- expand search parameters to include location and vendor
+- add email funcitonality to send registered users promotions on their favorite vendors and products
+- expand payment and login options with more robust authentication
