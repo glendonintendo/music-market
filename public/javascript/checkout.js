@@ -15,6 +15,7 @@ async function checkoutButtonHandler(event) {
         totalPrice += parseFloat(productPrices[i].innerHTML);
     }
 
+    totalPrice = Math.ceil(totalPrice * 100) / 100;
     document.querySelector('.total').innerHTML = "Total: <strong>$" + totalPrice + "</strong>";
 
     document.querySelector('.paypalContainerSect').remove();
@@ -74,5 +75,6 @@ $(document).ready(function(){
     document.querySelectorAll('.removeItem').forEach(item => {
         item.addEventListener('click', removeItemFromCart);
     });
+    
 })
 
