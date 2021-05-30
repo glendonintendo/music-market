@@ -27,8 +27,6 @@ function addItemToCart(e){
     let total = parseFloat(cartProductQuantity.value) * parseFloat(price);
     total = Math.ceil(total * 100) / 100;
     total = total.toString();
-
-    console.log(price);
     
     cartProductQuantity.setAttribute('data-base', price);
 
@@ -38,8 +36,6 @@ function addItemToCart(e){
     }
 
     cartProductPrice.innerHTML = total;
-
-    console.log(total);
 
     divEl.className = 'cartItem';
     cartProductQuantity.className = 'cartProductQuantity';
@@ -65,9 +61,6 @@ function addItemToCart(e){
 }
 
 function changeTotal(e){
-
-    console.log(parseFloat(this.value));
-
     let newProductPrice = parseFloat(this.value) * parseFloat(this.getAttribute('data-base'));
     newProductPrice = Math.ceil(newProductPrice * 100) / 100;
 
@@ -76,8 +69,6 @@ function changeTotal(e){
     if(newProductPrice.indexOf('.') < 0){
         newProductPrice += '.00';
     }
-
-    console.log(newProductPrice);
 
     this.parentElement.childNodes[2].innerHTML = newProductPrice;
 
@@ -114,6 +105,3 @@ $(document).ready(function(){
         element.addEventListener("click", addItemToCart); 
     });
 });
-
-
-console.log('js is loaded');
