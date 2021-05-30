@@ -4,14 +4,14 @@
             <ul class="menu dropdown navbarLinks" data-dropdown-menu>
                 <li class="menu-text"><div id="homepage-nav">Music Market</div></li>
                 <li>
-                    Browse
+                    <div id="browse-nav">Browse</div>
                     <ul class="menu">
                         {{#each categories as |category|}}
-                        <a href="/browse/{{category.id}}"><li>{{category.category_name}}</li></a>
+                        <a href="/browse?category_id={{category.id}}"><li>{{category.category_name}}</li></a>
                         {{/each}}
                     </ul>
                 </li>
-                <li>Deals</li>
+                {{!-- <li>Deals</li> --}}
                 <li><div id="contact-nav">Contact</div></li>
             </ul>
         </div>
