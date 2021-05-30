@@ -34,13 +34,19 @@
                 {{#each products as |product|}}
                 <div class="card-container">
                     <div class="card">
-                        <div class="card-divider">{{product.product_name}}</div>
+                        <div class="card-divider">
+                            <div class="space">
+                                {{product.product_name}}
+                            </div>
+                        </div>
                         <div class="card-section">
                             <div class="img-height-container">
                                 <img src={{product.image_path}} alt="this ain't working">
                             </div>
-                            <p>{{product.description}}</p>
-                            <p>Price: {{product.price}}</p>
+                            <p>{{product.description}}<br/><strong>${{product.price}}</strong></p>
+                            <label for="quantity">Quantity: </label>
+                            <input type="number" name="quantity" id="quantity" pattern="/d+" step="1" value="1">
+                            <button type="button" class="orange-black-button-small">Add To Cart</button>
                         </div>
                     </div>
                 </div>

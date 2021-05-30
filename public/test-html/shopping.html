@@ -43,12 +43,9 @@
                             <h2>Cart</h2>
                             <p>Your Items: </p>
                             <div id="cart">
-                                <div>
-                                    <div class="cartProductQuantity">x2</div>
-                                    <div class="cartProductName">item1</div>
-                                    <div class="removeItem">&times;</div>
-                                </div>
+                                
                             </div>
+                            <div class="total"></div>
                             <input type="checkbox" name="terms" id="terms">
                             <label for="terms">Terms & Conditions</label>
                             <div class="paypalContainerSect"></div>
@@ -89,23 +86,33 @@
             <div class="product-container">
                 <div class="card-container">
                     <div class="card">
-                        <div class="card-divider">Product 1</div>
+                        <div class="card-divider">
+                            <div class="space">Product 1</div>
+                        </div>
                         <div class="card-section">
                             <div class="img-height-container">
                                 <img src="../images/guitar.jpg" alt="cool guitar">
                             </div>
-                            <p>Check out this cool guitar</p>
+                            <p>Check out this cool guitar<br/><strong>$20.26</strong></p>
+                            <label for="quantity">Quantity: </label>
+                            <input type="number" name="quantity" id="quantity"pattern="/d+" step="1">
+                            <button type="button" class="orange-black-button-small">Add To Cart</button>
                         </div>
                     </div>
                 </div>
                 <div class="card-container">
                     <div class="card">
-                        <div class="card-divider">Product 2</div>
+                        <div class="card-divider">
+                            <div class="space">Product 2</div>
+                        </div>
                         <div class="card-section">
                             <div class="img-height-container">
                                 <img src="../images/harp.jpg" alt="cool guitar">
                             </div>
-                            <p>Check out this cool harp, grandma not included</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus doloremque dicta eius fugiat incidunt, quaerat nisi animi odit pariatur cupiditate inventore veritatis, soluta adipisci similique exercitationem, amet voluptatum? Minima, facere!<br/><strong>$20.00</strong></p>
+                            <label for="quantity">Quantity: </label>
+                            <input type="number" name="quantity" id="quantity"pattern="/d+" step="1">
+                            <button type="button" class="orange-black-button-small">Add To Cart</button>
                         </div>
                     </div>
                 </div>
