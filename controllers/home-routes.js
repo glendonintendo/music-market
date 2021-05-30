@@ -25,8 +25,8 @@ router.get('/', (req, res) => {
         });
 });
 
-// browse page (by category)
-router.get('/browse/:id', (req, res) => {
+// browse page
+router.get('/browse', (req, res) => {
     const categoryPromise = 
         Category.findAll({
             attributes: [
@@ -34,36 +34,62 @@ router.get('/browse/:id', (req, res) => {
                 'category_name'
             ]
         });
-
+    
+    let productPromise;
+    if (req.query.category_id) {
+        productPromise = 
+            Product.findAll({
+                where: {
+                    category_id: req.query.category_id
+                },
+                attributes: [
+                        'id',
+                        'product_name',
+                        'description',
+                        'price',
+                        'stock',
+                        'image_path'
+                ],
+                include: [
+                    {
+                        model: Category,
+                        attributes: ['id', 'category_name']
+                    },
+                    {
+                        model: Tag,
+                        attributes: ['tag_name'],
+                        through: ProductTag
+                    }
+                ]
+            });
+    } else {
+        productPromise = 
+            Product.findAll({
+                attributes: [
+                        'id',
+                        'product_name',
+                        'description',
+                        'price',
+                        'stock',
+                        'image_path'
+                ],
+                include: [
+                    {
+                        model: Category,
+                        attributes: ['id', 'category_name']
+                    },
+                    {
+                        model: Tag,
+                        attributes: ['tag_name'],
+                        through: ProductTag
+                    }
+                ]
+            });
+    }
+    
     const tagPromise = 
         Tag.findAll();
-
-    const productPromise = 
-        Product.findAll({
-            where: {
-                category_id: req.params.id
-            },
-            attributes: [
-                    'id',
-                    'product_name',
-                    'description',
-                    'price',
-                    'stock',
-                    'image_path'
-            ],
-            include: [
-                {
-                    model: Category,
-                    attributes: ['id', 'category_name']
-                },
-                {
-                    model: Tag,
-                    attributes: ['tag_name'],
-                    through: ProductTag
-                }
-            ]
-        });
-        
+            
     Promise.all([categoryPromise, productPromise, tagPromise])
         .then(data => {
             const categories = data[0].map(categories => categories.get({ plain: true }));
@@ -104,7 +130,3 @@ router.get('/contact', (req, res) => {
 })
 
 module.exports = router;
-
-
-
-
