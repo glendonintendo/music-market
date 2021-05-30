@@ -29,6 +29,7 @@
         </section>
         <section class="shopping">
             <h2>Results: </h2>
+            <p>You must be logged in to purchase items. Log in or sign up on our <a href="/">homepage</a>.</p>
             <div class="faux-border2">a</div>
             <div class="product-container">
                 {{#each products as |product|}}
@@ -41,12 +42,14 @@
                         </div>
                         <div class="card-section">
                             <div class="img-height-container">
-                                <img src={{product.image_path}} alt="this ain't working">
+                                <img src={{product.image_path}} alt="pic">
                             </div>
                             <p>{{product.description}}<br/><strong>${{product.price}}</strong></p>
+                            {{#if loggedIn}}
                             <label for="quantity">Quantity: </label>
                             <input type="number" name="quantity" id="quantity" pattern="/d+" step="1" value="1">
                             <button type="button" class="orange-black-button-small">Add To Cart</button>
+                            {{/if}}
                         </div>
                     </div>
                 </div>
